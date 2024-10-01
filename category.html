@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <title>Esame famoso</title>
+</head>
+<body>
+    <header >
+        <div class="header-top container clearfix ">
+          <div class="nav-menu float-left " id="navbarSupportedContent">
+            <nav class="navbar-collapse py-3 navbar navbar-expand-lg navbar-light fixed-top auto-hiding-navbar">
+                <div class="logo float-left ">
+                    <img src="img/Risorsa 1.png" class="logo">
+                </div>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">  
+                        <a class="nav-link" href="./index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" type="button" href="./category.html" id="recipeBtn">RECIPES</a>
+                    </li>
+                    <li class="nav-item">
+                      
+                        <a class="nav-link" type="button" data-bs-toggle="modal" data-bs-target="#modalLogIn">
+                            LOG IN
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-fill mt-2" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        </svg>
+                    </li>
+                </ul>
+            </nav>
+          </div>
+     
+        </div>
+      </header>
+    
+
+    <div id="modalLogIn" class="modal fade" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Accedi</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="logInForm">
+                        <div class="form-floating mb-3">
+                            <input id="loginEmailField" autocomplete="email" class="form-control" placeholder="name@example.com" type="email" required>
+                            <label for="loginEmailField">Indirizzo e-mail</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input id="loginPasswordField" autocomplete="new-password" class="form-control" placeholder="Password" type="password" required>
+                            <label for="loginPasswordField">Password</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> Annulla </button>
+                    <button class="btn btn-warning" form="registerForm" type="submit" data-bs-toggle="modal" data-bs-target="#modalSignIn"> Registrati </button>
+                    <button class="btn btn-primary" form="logInForm" type="submit"> Accedi </button>
+                    <div class="modal-footer">
+                        <p>Forgot <a href="#">Password?</a></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="modalSignIn" class="modal fade" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Registrati</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="registerForm">
+                        <div class="form-floating mb-3">
+                            <input name="firstNameField" id="firstNameField" class="form-control"  type="text" required>
+                            <label for="firstNameField">First name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input name="lastNameField" id="lastNameField" class="form-control"  type="text" required>
+                            <label for="lastNameField">Last name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input name="registerEmailField" id="registerEmailField" autocomplete="email" class="form-control" placeholder="name@example.com" type="email" required>
+                            <label for="registerEmailField">Indirizzo e-mail</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input name="registerPasswordField" id="registerPasswordField" autocomplete="new-password" class="form-control" placeholder="Password" type="password" required>
+                            <label for="registerPasswordField">Password</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input name="registerPasswordConfirmField" id="registerPasswordConfirmField" autocomplete="new-password" class="form-control" placeholder="Conferma Password" type="password" required>
+                            <label for="registerPasswordConfirmField">Conferma Password</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> Annulla </button>
+                    <button class="btn btn-primary" form="registerForm" type="submit"> Registrati </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5 p-5 justify-content-center">
+        <container class="col-lg-4 col-md-6 mt-5">
+            <form action="#">
+                <div class="input-group mb-3">
+                    <input class="form-control" id="mainSearchBar" type="text" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
+                    <button class="btn btn-primary" id="mainSearchBtn" type="button"><i class="fas fa-paper-plane">Search</i></button>
+                </div>
+            </form>
+        </container>
+    </div>
+
+    <div id="recipeCard" class="containerCard">
+        <a id="title">Today's Top Recipe</a><br>
+        <a id="nameRD">Vegan Lasagna</a><br>
+        <img src="./img/lasagnaVegana.jpeg"><br><br>
+        <p class="recipeText">1) Preheat oven to 180 degrees celcius. 2) Boil vegetables for 5-7 minutes, until soft. Add lentils and bring to a gentle simmer, adding a stock cube if desired. Continue cooking and stirring until the lentils are soft, which should take about 20 minutes. 3) Blanch spinach leaves for a few minutes in a pan, before removing and setting aside. 4) Top up the pan with water and cook the lasagne sheets. When cooked, drain and set aside. 5) To make the sauce, melt the butter and add the flour, then gradually add the soya milk along with the mustard and the vinegar. Cook and stir until smooth and then assemble the lasagne as desired in a baking dish. 6) Bake in the preheated oven for about 25 minutes.</p>
+    </div>
+    
+    <footer class='w-100 py-4 flex-shrink-0' id="footer">
+        <div class="container py-4">
+            <div class="row gy-4 gx-5">
+                <div class="col-lg-4 col-md-6">
+                    <img src="./img/Risorsa 1.png" class="logo">
+                    <p class="small text-muted">© 2022 Yummy Bite. All Rights Reserved.
+                        .</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="footerW"><a class="nav-link" href="#">First dishes</a></li>
+                        <li class="footerW"><a class="nav-link" href="#">Second dishes</a></li>
+                        <li class="footerW"><a class="nav-link" href="/category.html?s=Dessert">Desserts</a></li>
+                        <li class="footerW"><a class="nav-link" href="/category.html?s=Vegan">Vegan</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="footerW"><a class="nav-link" href="#">Instagram</a></li>
+                        <li class="footerW"><a class="nav-link" href="#">Facebook</a></li>
+                        <li class="footerW"><a class="nav-link" href="#">Privacy</a></li>
+                        <li class="footerW"><a class="nav-link" href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <p class="small text-muted">Search what you want.</p>
+                    <form action="#">
+                        <div class="input-group mb-3">
+                            <input class="form-control" type="text" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
+                            <button class="btn btn-primary" id="footerSearchBar" type="button"><i class="fas fa-paper-plane">Search</i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./js/category.js" type="module"></script>
+</body>
+</html>
+

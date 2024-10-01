@@ -1,0 +1,123 @@
+.py-3{
+    background: #EEDDCE;
+    padding: 50px 0px;
+    display:flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+}
+
+.card{
+    width: 25rem;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 50px;
+    justify-content: space-between;
+}
+
+.nav-link{
+    font-family: 'Heiti TC';
+    font-style: normal;
+    font-size: 18px;
+    color: #000000;
+}
+.nav-item{
+    padding: 0 15px;
+}
+#modalLogIn #modalSignIn{
+    font-family: 'Heiti TC';
+    font-style: normal;
+    font-size: 18px;
+}
+.modal-footer{
+    font-family: 'Heiti TC';
+    font-style: normal;
+    font-size: 18px;
+}
+
+#SearchBar {
+    width: 300px;
+}
+
+#footer{
+    bottom:0;
+    left:0;
+    width:100%;
+    background: #EEDDCE;
+}
+
+.footerW{
+    font-family: 'Heiti TC';
+    font-style: normal;
+    font-size: 15px;
+    color: #000000;
+}
+
+.card-body{
+    font-family: 'Heiti TC';
+    font-style: normal;
+    font-size: 15px;
+    color: #000000;
+    text-decoration: none;
+    
+    
+}
+.card-title{
+    font-family: 'Heiti TC';
+    font-style: normal;
+    font-size: 20px;
+    color: #000000;
+    text-decoration: none;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+.header-top{
+    background: #EEDDCE;
+}
+
+.recipeImg {
+    align-content: center;
+}
+
+#titleRecipe{
+    font-family: 'Heiti TC';
+    font-style: normal;
+    font-size: 25px;
+    color: #000000;
+    text-decoration: none;
+}
+.categoryRecipe{
+    font-family: 'Heiti TC';
+    font-style: normal;
+    font-size: 20px;
+    color: #000000;
+}
+.recipeText{
+    font-family: 'Heiti TC';
+    font-style: normal;
+    font-size: 18px;
+    color: #000000;
+}
+#title{
+    font-family: 'Give You Glory';
+    font-style: normal;
+    font-size: 35px;
+    color: #000000;
+    justify-content: center;
+
+}
+#nameRD{
+    font-family: 'Heiti TC';
+    font-style: normal;
+    font-size: 25px;
+    color: #000000;
+    text-decoration: none;
+    justify-content: center;
+}
